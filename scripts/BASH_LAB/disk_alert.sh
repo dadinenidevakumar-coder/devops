@@ -19,6 +19,7 @@ if ! command -v df >/dev/null 2>&1; then
        exit 2
        fi
 
+
 used="$(df -P / | tail -n 1 | tr -s ' ' | cut -d' ' -f5 | tr -d '%')"
             log "INFO" "Disk used on / = ${used}% (limit=${limit}%)"
 
