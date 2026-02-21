@@ -11,7 +11,7 @@ mkdir -p logs
 
 log() {
          ts="$(date '+%F %T')"
-          printf "%s [%s] %s\n" "$ts" "$!" "$2" | tee -a "$logfile"
+          printf "%s [%s] %s\n" "$ts" "$1" "$2" | tee -a "$logfile"
         }
 
 if ! command -v df >/dev/null 2>&1; then
