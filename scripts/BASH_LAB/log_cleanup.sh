@@ -34,7 +34,7 @@ find "$folder" -type f -name "*.log" -mtime +"$days" -print | tee -a "$logfile"
 
        echo
    read -r -p "Type YES to delete: " ans
-  if [[ "ans" == "YES" ]]; then
+  if [[ "$ans" == "YES" ]]; then
  find "$folder" -type f -name "*.log" -mtime +"$days" -delete
     log "OK" "Deleted old logs"
    exit 0
